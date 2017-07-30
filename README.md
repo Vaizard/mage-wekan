@@ -32,12 +32,9 @@ service snap.wekan.mongodb <action>
 
 # For more help see
 wekan.help
-
-# Impossible to refresh wekan to a newer version? See the last comment in
-# https://forum.snapcraft.io/t/error-when-updating-snap-and-cleaning-old-revisions/786/14
 ```
 
-Upgrade workaround (lxd container version - for a different setup just drop the `lxc exec wekan --`)
+Impossible to refresh wekan to a newer version? See the last comment in https://forum.snapcraft.io/t/error-when-updating-snap-and-cleaning-old-revisions/786/14, if trial and error is not for you, see below how to upgrade the snap with explenations. In production, we use lxd containers to separate all services from each other, so if you run wekan in any other way, just drop the `lxc <something> wekan`. **NOTE** that you must read the output to type in the correct mount snap numbers and snap task numbers.
 
 ```bash
 lxc snapshot wekan # make a snapshot in case things go wrong
